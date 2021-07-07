@@ -33,6 +33,9 @@ body {
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
+div {
+  transition-delay: 3s;
+}
 .typewriter h2 {
   color: #fff;
   font-family: monospace;
@@ -42,7 +45,7 @@ body {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   -webkit-animation: 
-    wait 3s
+    
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
           animation: 
