@@ -52,8 +52,6 @@ body {
     blink-caret .5s step-end infinite;
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
 }
 
 /* The typing effect */
