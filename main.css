@@ -23,17 +23,29 @@ body{
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);    
 }
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 2.25s steps(20) 1s 1 normal both,
+  -webkit-animation: typewriter 2.25s steps(20) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
+          animation: typewriter 2.25s steps(20) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@-webkit-keyframes typewriter{
+  from{width: 0;}
+  to{width: 8.3em;}
 }
 @keyframes typewriter{
   from{width: 0;}
   to{width: 8.3em;}
+}
+@-webkit-keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
