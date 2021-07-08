@@ -44,13 +44,13 @@ body {
   letter-spacing: .15em; /* Adjust as needed */
   
   -webkit-animation: 
-   
+     animation-delay: 2s;
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
           animation: 
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
-  animation-delay: 2s;
+
 }
 
 /* The typing effect */
