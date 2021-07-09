@@ -6,12 +6,13 @@
   <body>
 
     <div style="display: flex; flex-direction: column;">
-      <div>
+      <div id="typewriter" class="typewriter">
         <h1>theparty | mpls</h1>
       </div>
       <div>
         <h3>
-          <a href="" class="typewrite anim-typewriter" data-period="2000" data-type='["are you in?", "ready to go?", "will you be there?"]'>
+          <a href="" id="typewritewithbackspace" data-period="2000" data-type='["are you in?", "ready to go?", "will you be there?"]'>
+          <!-- <a href="" class="anim-typewriterwithbackspace" data-period="2000" data-type='["are you in?", "ready to go?", "will you be there?"]'> -->
             <span class="wrap"></span>
           </a>
         </h3>
@@ -66,7 +67,12 @@
     };
 
     window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
+      setTimeout(() => {
+        let element = document.getElementById('typewriter');
+        element.classList.remove('typewriter');
+        element = document.getElementById('typewritewithbackspace');
+        element.classList.add('typewritewithbackspace');
+        var elements = document.getElementsByClassName('typewritewithbackspace');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
@@ -74,11 +80,7 @@
               new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
+      }, 5000)
     };
   </script>
 </html>
