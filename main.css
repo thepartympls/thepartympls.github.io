@@ -1,9 +1,5 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* GLOBAL STYLES */
 body {
@@ -12,6 +8,7 @@ body {
   padding-top: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
+  font-family: 'Anonymous Pro', monospace;  
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
